@@ -9,6 +9,18 @@
 
 # dependencies
 /node_modules
+/functions/node_modules
+
+# firebase files
+firebase-debug.log
+firestore.indexes.json
+firestore.rules
+firebase.json
+storage.rules
+.firebaserc
+
+# environment files
+/src/environments/*
 
 # profiling files
 chrome-profiler-events*.json
