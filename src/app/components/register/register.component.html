@@ -1,0 +1,30 @@
+<div class="bg-secondary h-100">
+	<div class="container d-flex justify-content-center align-items-center h-100">
+		<div class="card card-body" style="max-width: 350px;">
+			<h5 class="font-weight-light border-bottom pb-2">Register For Motice</h5>
+			<form [formGroup]="registerForm" autocomplete="none">
+				<div class="form-group">
+					<label class="control-label">Company Name</label>
+					<input type="text" class="form-control" formControlName="company" placeholder="Acme Industries" name="company" autocomplete="noCompanyAuto" required />
+				</div>
+				<div class="form-group">
+					<label class="control-label">Email Address</label>
+					<input type="email" class="form-control" formControlName="email" placeholder="janedoe@acme.com" name="email" autocomplete="noEmailAuto" required />
+				</div>
+				<div class="form-group">
+					<label class="control-label">Password</label>
+					<input #pass type="password" class="form-control" formControlName="password" name="password" autocomplete="noPasswordAuto" minlength="6" maxlength="12" required />
+					<span class="input-text text-muted"><small>Must be between 6-12 characters long.</small></span>
+				</div>
+				<div class="form-group clearfix">
+					<label class="control-label">Confirm Password</label>
+					<input #conf type="password" class="form-control" formControlName="confirm" name="confirmPassword" autocomplete="noPasswordConfirmAuto" minlength="6" maxlength="12" required />
+					<span class="input-text text-muted"><small>Must match password.</small></span>
+				</div>
+				<button type="button" class="btn btn-block btn-outline-primary" (click)="register()" [disabled]="!registerForm.valid">Register Now</button>
+				<p class="text-center mt-4 font-weight-light sideline">OR</p>
+				<button type="button" class="btn btn-block btn-outline-danger" (click)="googleRegister()">Register with Google</button>
+			</form>
+		</div>
+	</div>
+</div>

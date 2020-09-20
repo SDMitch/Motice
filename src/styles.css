@@ -1,1 +1,33 @@
-/* You can add global styles to this file, and also import other style files */
+
+body, html {
+	height: 100%;
+}
+
+.app {
+	padding-top: 52px;
+}
+
+.sideline {
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	text-align: center;
+}
+.sideline:before, .sideline:after {
+	position: absolute;
+	top: 51%;
+	overflow: hidden;
+	width: 50%;
+	height: 1px;
+	content: '\a0';
+	background-color: #6c757d;
+	opacity: 0.4;
+}
+.sideline:after {
+	margin-left: 5px;
+}
+.sideline:before {
+	margin-left: -52%;
+	margin-right: 5px;
+	text-align: right;
+}
